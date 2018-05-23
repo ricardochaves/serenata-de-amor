@@ -1,11 +1,5 @@
 # Jarbas — a tool for [Serenata de Amor](http://github.com/okfn-brasil/serenata-de-amor)
 
-[![Build Status](https://travis-ci.org/okfn-brasil/jarbas.svg?branch=master)](https://travis-ci.org/okfn-brasil/jarbas)
-[![Code Climate](https://codeclimate.com/github/okfn-brasil/jarbas/badges/gpa.svg)](https://codeclimate.com/github/okfn-brasil/jarbas)
-[![Coverage Status](https://coveralls.io/repos/github/okfn-brasil/jarbas/badge.svg?branch=master)](https://coveralls.io/github/okfn-brasil/jarbas?branch=master)
-[![Updates](https://pyup.io/repos/github/okfn-brasil/jarbas/shield.svg)](https://pyup.io/repos/github/okfn-brasil/jarbas/)
-[![donate](https://img.shields.io/badge/donate-apoia.se-EB4A3B.svg)](https://apoia.se/serenata)
-
 [Jarbas](http://jarbas.serenata.ai/) is part of [Serenata de Amor](http://github.com/okfn-brasil/serenata-de-amor) — we fight corruption with data science.
 
 Jarbas is in charge of making data from [CEAP](https://github.com/okfn-brasil/serenata-de-amor/blob/master/CONTRIBUTING.md#more-about-the-quota-for-exercising-parliamentary-activity-ceap) more accessible. In the near future Jarbas will show what [Rosie](https://github.com/okfn-brasil/rosie) thinks of each reimbursement made for our congresspeople.
@@ -172,12 +166,6 @@ Copy `contrib/.env.sample` as `.env` in the project's root folder and adjust you
 
 * `CELERY_BROKER_URL` (_string_) [Celery](http://docs.celeryproject.org/en/latest/django/first-steps-with-django.html) compatible message broker URL (e.g. `amqp://guest:guest@localhost//`)
 
-##### Amazon S3 settings
-
-* `AMAZON_BUCKET` (_str_) Name of the Amazon S3 bucket to look for datasets (e.g. `serenata-de-amor-data`)
-* `AMAZON_REGION` (_str_) Region of the Amazon S3 (e.g. `s3-sa-east-1`)
-* `AMAZON_S3_CEAPTRANSLATION_DATE` (_str_) File name prefix for dataset guide (e.g. `2016-08-08` for `2016-08-08-ceap-datasets.md`)
-
 ##### Google settings
 
 * `GOOGLE_ANALYTICS` (_str_) Google Analytics tracking code (e.g. `UA-123456-7`)
@@ -296,7 +284,6 @@ $ python manage.py reimbursements <path to reimbursements.xz>
 $ python manage.py suspicions <path to suspicions.xz file>
 $ python manage.py companies <path to companies.xz>
 $ python manage.py tweets
-$ python manage.py ceapdatasets
 ```
 
 There are sample files to seed yout database inside `contrib/data/`. You can get full datasets running [Rosie](https://github.com/okfn-brasil/rosie) or directly with the [toolbox](https://github.com/okfn-brasil/serenata-toolbox).
